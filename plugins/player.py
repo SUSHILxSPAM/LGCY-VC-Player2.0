@@ -385,7 +385,7 @@ async def skip(_, message: Message):
    ) 
 
 
-@Client.on_message(commandpro(["/end", "end", "/stop", "stop", "x", "s"]) & other_filters)
+@Client.on_message(commandpro(["/end", "end", "/stop", "stop", "x", "s", "e"]) & other_filters)
 @errors
 @authorized_users_only
 async def stop(_, message: Message):
