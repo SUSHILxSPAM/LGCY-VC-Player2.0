@@ -329,7 +329,7 @@ async def play(_, message: Message):
     return await lel.delete()
     
     
-@Client.on_message(commandpro(["/pause", "pause"]) & other_filters)
+@Client.on_message(commandpro(["/pause", "pause", "mute", "/mute" , "m"]) & other_filters)
 @errors
 @authorized_users_only
 async def pause(_, message: Message):
@@ -340,7 +340,7 @@ async def pause(_, message: Message):
     )
 
 
-@Client.on_message(commandpro(["/resume", "resume"]) & other_filters)
+@Client.on_message(commandpro(["/resume", "resume", "r" , "continue"]) & other_filters)
 @errors
 @authorized_users_only
 async def resume(_, message: Message):
@@ -352,7 +352,7 @@ async def resume(_, message: Message):
 
 
 
-@Client.on_message(commandpro(["/skip", "/next", "skip", "next"]) & other_filters)
+@Client.on_message(commandpro(["/skip", "/next", "skip", "next", "n"]) & other_filters)
 @errors
 @authorized_users_only
 async def skip(_, message: Message):
@@ -385,7 +385,7 @@ async def skip(_, message: Message):
    ) 
 
 
-@Client.on_message(commandpro(["/end", "end", "/stop", "stop", "x"]) & other_filters)
+@Client.on_message(commandpro(["/end", "end", "/stop", "stop", "x", "s"]) & other_filters)
 @errors
 @authorized_users_only
 async def stop(_, message: Message):
